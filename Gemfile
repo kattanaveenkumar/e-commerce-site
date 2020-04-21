@@ -37,7 +37,7 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'devise'
 gem 'haml'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 gem "font-awesome-rails"
 
 gem 'redis'
