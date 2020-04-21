@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 card">
+      <table class="table">
+      	<thead>
+      		<th>User</th>
+      		<th>Product</th>
+      		<th>Quantity</th>
+      		<th>Order Date</th>
+      	</thead>
+      	<tbody>
+      		<%= render partial: "admin_order", collection: @orders %>
+      	</tbody>
+      </table>
+    </div>
+  </div>
+</div>

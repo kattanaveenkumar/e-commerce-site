@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="card">
+    <div class="page-header">
+      <ol class="breadcrumb mt-0">
+        <li><%= link_to "Products", products_path, class: "m-1" %></li>
+        /
+        <li class="active ml-1"><%= link_to @product.name, product_path(@product) %></li>
+      </ol>
+    </div>
+    <div class="card-body">
+      <div class="row">
+       <div class="col-md-7 p-0" >
+        <h2><%= @product.name %></h2>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <%#= image_tag(@product.image.url, height: "200px", width: "100%" ) if @product.image%>
+              <div class="carousel-caption">
+                Image 1
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- carousel ends here -->   
+      </div>
+      <div class="col-md-5 mt-5">
+        <b><%= @product.description %> </b><br/>
+        <b>Price :</b> <small>INR</small> <%= @product.price %> <br/>
+        <b>Quantity :</b> <%#= @product.end_datetime.strftime("%d %B %Y - %I:%M %P ") %><br/>
+        <%= link_to 'Add to Cart', add_to_cart_path(@product), class: "btn btn-success mt-3", method: :put %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

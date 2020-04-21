@@ -1,0 +1,16 @@
+<% @products.each do |product|%>
+<div class="card ml-3">
+  <div class="card-body">
+    <div class="card-title">
+      <%= image_tag product.image.url, height: "150", width: "225"%>
+      <p class="text-center mt-2"> <%= product.name %></p>
+    </div>
+    <div class="card-text">
+      <p class="text-center mt-2"> <small> INR </small> <%= product.price %></p>
+    </div>
+    <div class="card-footer text-center ">
+      <%= link_to 'View Product', product_path(product) %>
+    </div>
+  </div>
+</div>
+<% end %>

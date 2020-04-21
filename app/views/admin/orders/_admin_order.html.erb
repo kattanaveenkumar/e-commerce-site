@@ -1,0 +1,8 @@
+<% @orders.each do |order|%>
+	<tr>
+		<td> <%= order.user.email %></td>
+		<td> <%= order.product.name  %></td>
+		<td> <%= order.quantity %></td>
+		<td> <%= order.created_at.getlocal.strftime("%e-%m-%y %H:%M") %></td>
+	</tr>
+<% end %>

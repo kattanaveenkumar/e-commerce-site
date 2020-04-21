@@ -1,0 +1,35 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto form p-4">
+			<h1 class="display-4 py-2 text-truncate">Add Product</h1>
+			<%= simple_form_for [:admin, @product], class: "form-horizontal" do |f| %>
+			<div class="form-group">
+				<%= f.label :name %>*
+				<%= f.text_field :name, class: "form-control" %>		
+			</div>
+			<div class="form-group">
+				<%= f.label :description %>
+				<%= f.text_area :description, class: "form-control" %> 		
+			</div>
+
+			<div class="form-group">
+				<%= f.label :image %>*
+				<%= f.file_field :image, class: "form-control" %>
+			</div>
+
+			<div class="form-group">
+				<%= f.label "Price" %>*
+				<%= f.text_field :price, id: "price", class: "form-control" %> 
+			</div>
+
+			<div class="form-group">
+				<%= f.association :categories, collection: Category.all, as: :check_boxes, include_hidden: false, class: "form-control" %> 
+			</div>
+
+			<%= f.submit "Submit", class: "btn btn-success"%><br />
+			<%= link_to 'Back to Product List', admin_products_path %>
+
+			<% end %>
+		</div>
+	</div>
+</div>

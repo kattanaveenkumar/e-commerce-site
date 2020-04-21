@@ -1,0 +1,2 @@
+class OptionValue < ApplicationRecord
+end
