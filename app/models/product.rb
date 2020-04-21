@@ -2,7 +2,7 @@ class Product < ApplicationRecord
 	has_many :product_categories, dependent: :destroy
 	has_many :categories, through: :product_categories
 
-	validates :name, :image, :description
+	validates :name, :image, :description, presence: true
 
 	has_attached_file :image,
 										:url => "/attachments/:id/:style/:basename.:extension",
