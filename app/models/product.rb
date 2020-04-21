@@ -4,9 +4,7 @@ class Product < ApplicationRecord
 
 	validates :name, :image, :description, presence: true
 
-	has_attached_file :image,
-										:url => "/attachments/:id/:style/:basename.:extension",
-                    :path => ":rails_root/public/products/attachments/:id/:style/:basename.:extension"
+	has_attached_file :image
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 end
