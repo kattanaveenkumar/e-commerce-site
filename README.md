@@ -7,18 +7,17 @@ Things you may want to cover:
 
 * Ruby version
 
+  - ruby 2.6.2p47
+
+* Rails  version
+  - Rails 5.2.4.2
+
 * System dependencies
 
+  - Install ImageMagick
+
 * Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Clone the project code
+  - Install ruby libraries with `bundle install`
+  - Initialize database with `bundle exec rake db:create db:schema:load db:seed db:migrate`
+  - Start application with `rails server`
