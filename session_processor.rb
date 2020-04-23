@@ -13,7 +13,6 @@ class SessionProcessor
 
   end
 
-  #TODO process order_sessions accordingly
 
   def hold_order_summary_data
     final_orders = []
